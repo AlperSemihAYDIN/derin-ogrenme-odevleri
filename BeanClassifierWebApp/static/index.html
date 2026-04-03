@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuru Fasulye Sınıflandırıcı</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🫘</div>
+            <h1>Kuru Fasulye Sınıflandırıcı</h1>
+            <p class="subtitle">PyTorch derin öğrenme modeli ile fasulye türü tahmini</p>
+        </header>
+
+        <main>
+            <form id="predictionForm">
+                <div class="form-grid" id="featureInputs">
+                    <!-- JS ile doldurulacak -->
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn btn-primary" id="predictBtn">
+                        <span class="btn-text">Tahmin Et</span>
+                        <span class="btn-loader" hidden>⏳</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="clearBtn">Temizle</button>
+                    <button type="button" class="btn btn-accent" id="sampleBtn">Örnek Veri Yükle</button>
+                </div>
+            </form>
+
+            <div id="resultSection" class="result-section" hidden>
+                <h2>Tahmin Sonucu</h2>
+                <div class="result-card">
+                    <div class="predicted-class">
+                        <span class="label">Tahmin Edilen Sınıf</span>
+                        <span class="value" id="predictedClass">-</span>
+                    </div>
+                    <div class="confidence">
+                        <span class="label">Güven Oranı</span>
+                        <span class="value" id="confidenceValue">-</span>
+                    </div>
+                </div>
+
+                <h3>Tüm Sınıf Olasılıkları</h3>
+                <div class="probabilities" id="probabilityBars">
+                    <!-- JS ile doldurulacak -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Dry Bean Dataset — PyTorch + FastAPI</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
